@@ -52,6 +52,9 @@ if (isset($_SESSION["result"])) {
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
+            <a class="nav-link" href="upload.php">Upload Images</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="logout.php">Log Out</a>
         </li>
       </ul>

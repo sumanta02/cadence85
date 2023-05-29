@@ -100,9 +100,66 @@ scroll-behavior: smooth;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500&display=swap');
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+}
+
+.social-icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.signature {
+  font-size: 14px;
+  color: #777;
+}
+
+.signature::before {
+  content: "\f004";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 5px;
+}
 
 body{
 font-family: 'Roboto', 'sans-serif';
+}
+.event-scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.event-card {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.event-card a {
+  display: block;
+  text-decoration: none;
+}
+
+.event-image {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.event-details {
+  margin-top: 5px;
+}
+
+.event-title {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.event-date {
+  font-size: 14px;
+  color: #777;
 }
 
 </style>
@@ -127,6 +184,9 @@ font-family: 'Roboto', 'sans-serif';
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <a class="nav-link active" href="cadence85.php">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.php">Gallery</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="login.php">Admin Login</a>
@@ -367,6 +427,62 @@ font-family: 'Roboto', 'sans-serif';
     </table>
   </div>
 </section>
+<div class="container">
+  <h2 class="text-center">Past Events</h2>
+  
+  <div class="row">
+    <div class="col-md-12">
+      <div class="event-scroll">
+        <div class="event-card">
+          <a href="#">
+            <img src="event1.jpg" alt="Event 1" class="event-image">
+            <div class="event-details">
+              <h3 class="event-title">Event 1</h3>
+              <p class="event-date">January 1, 2022</p>
+            </div>
+          </a>
+        </div>
+        
+        <div class="event-card">
+          <a href="#">
+            <img src="event2.jpg" alt="Event 2" class="event-image">
+            <div class="event-details">
+              <h3 class="event-title">Event 2</h3>
+              <p class="event-date">February 15, 2022</p>
+            </div>
+          </a>
+        </div>
+        
+        <!-- Add more event cards as needed -->
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer-main-section">
+    <div class="container align-items-center">
+      <div class="center-div">
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+          <img src="instagram.png" alt="Instagram" class="social-icon">
+        </a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+          <img src="facebook.png" alt="Facebook" class="social-icon">
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+          <img src="linkedin.png" alt="LinkedIn" class="social-icon">
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <img src="twitter.png" alt="Twitter" class="social-icon">
+        </a>
+        <a href="https://github.com/sumanta02" target="_blank" rel="noopener noreferrer">
+          <img src="github.png" alt="GitHub" class="social-icon">
+        </a>
+        <span class="signature">Made with ❤️ in Kolkata</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
 
 <?php // Close the database connection
 $conn->close(); ?>
