@@ -58,6 +58,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       }
     }
   </script>
+    <script>
+      function showFileName() {
+        const fileInput = document.getElementById('file');
+        const fileNameLabel = document.getElementById('file-name-label');
+        fileNameLabel.textContent = fileInput.files[0].name;
+      }
+    </script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -98,8 +105,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <div class="form-group">
         <label for="file">Select file:</label>
         <div class="custom-file">
-          <input type="file" class="custom-file-input" id="file" name="file" accept=".zip,.jpg,.jpeg,.png" required onchange="updateFileLabel()">
-          <label class="custom-file-label" for="file">Choose file</label>
+          <input type="file" class="custom-file-input" id="file" accept=".zip,.jpg,.jpeg,.png" name="file" onchange="showFileName()" />
+          <label class="custom-file-label" id="file-name-label" for="file-upload">Choose file...</label>
         </div>
       </div>
       <button type="submit" class="btn btn-primary">Upload</button>
